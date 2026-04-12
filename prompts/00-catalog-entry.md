@@ -7,7 +7,9 @@ Using the design system defined in the Master Build Prompt, build the `<CatalogE
 
 ## What to Build
 
-A single reusable React component that renders one vinyl record as a catalog card. The card shows album art with a vinyl-disc hover animation and a two-column spec block below. It is never a buy button — it is a ledger entry.
+A single reusable React component that renders one vinyl record as a catalog card. The card shows album art with a two-column spec block below. It is never a buy button — it is a ledger entry.
+
+> **Note:** The vinyl disc slide-out animation belongs on the Product Detail Page (PDP) only, where the record is displayed solo. In grid context the disc emerges into the adjacent card — do not implement it here.
 
 ---
 
@@ -16,7 +18,6 @@ A single reusable React component that renders one vinyl record as a catalog car
 ```
 ┌─────────────────────────────────┐
 │       [ALBUM ART — square]      │  ← full-width, aspect-ratio 1/1
-│  [vinyl disc slides out right]  │  ← image hover only
 ├──────────────┬──────────────────┤
 │ 001          │ MARVIN GAYE      │
 │ SOUL         │ WHAT'S GOING ON  │
@@ -29,31 +30,14 @@ A single reusable React component that renders one vinyl record as a catalog car
 
 ## Image Container
 
-- `position: relative`, `overflow: visible` — **CRITICAL**, must never be `overflow: hidden`
+- `position: relative`, `overflow: hidden`
 - The entire image area is wrapped in an `<a>` linking to `/products/[slug]` — the **only** interactive element on the card
-
----
-
-## Vinyl Disc (CSS only)
-
-- `position: absolute`, `top: 5%`, `left: 5%`, `width: 88%`, `height: 88%`
-- `z-index: 1` (sits behind sleeve), `border-radius: 50%` — the **only** border-radius exception in the codebase
-- Background:
-  ```css
-  radial-gradient(circle at center,
-    #1a1818 0%, #1a1818 15%, #2a2828 15%,
-    #141313 40%, #1f1d1d 42%, #141313 44%,
-    #1f1d1d 46%, #141313 100%)
-  ```
-- Default state: `translateX(0%)` — disc tucked behind sleeve
-- On `<a>` hover: `translateX(55%)` — disc emerges to the right
-- Transition: `transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1)`
 
 ---
 
 ## Album Sleeve
 
-- `position: relative`, `z-index: 2`, `aspect-ratio: 1/1`, `overflow: hidden`
+- `aspect-ratio: 1/1`, `overflow: hidden`
 - `img`: `object-fit: cover`, `w-full h-full`
 
 ---
@@ -136,9 +120,9 @@ export const mockRecords: CatalogEntryProps[] = [
 
 ## Do Not
 
+- No vinyl disc element, no slide-out animation — disc animation is PDP-only
 - No buy button, add-to-cart, or price anywhere on the card
 - No overlay, badge, or tooltip on the album art
 - No centered text — spec block is always left-aligned
 - No colored card backgrounds on any state (hover, sold-out, etc.)
-- No `overflow: hidden` on the image container (disc must be able to emerge)
-- No border-radius anywhere except the vinyl disc itself
+- No border-radius anywhere on the card
