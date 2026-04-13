@@ -5,6 +5,7 @@ import FromTheCrates from "@/components/FromTheCrates";
 import FeaturedCollections from "@/components/FeaturedCollections";
 import SonicLineage from "@/components/SonicLineage";
 import AboutTrust from "@/components/AboutTrust";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <FeaturedCollections />
       <SonicLineage />
       <AboutTrust />
+      <Footer />
     </main>
   );
 }
