@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface CrateCardProps {
   artist: string;
@@ -6,9 +7,10 @@ interface CrateCardProps {
   label: string;
   year: string;
   price: string;
+  imageUrl: string;
 }
 
-export default function CrateCard({ artist, title, label, year, price }: CrateCardProps) {
+export default function CrateCard({ artist, title, label, year, price, imageUrl }: CrateCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
@@ -20,17 +22,29 @@ export default function CrateCard({ artist, title, label, year, price }: CrateCa
         {/* CARD FRONT */}
         <div
           className="absolute inset-0 w-full h-full flex flex-col items-end p-6"
-          style={{
-            background: 'linear-gradient(to top, rgba(20,19,19,0.85) 0%, rgba(20,19,19,0) 45%)',
-            backfaceVisibility: 'hidden',
-          }}
+          style={{ backfaceVisibility: 'hidden' }}
         >
-          <h2 className="font-serif text-cream font-normal text-[clamp(2.5rem,4vw,4rem)]">
-            {artist}
-          </h2>
-          <h3 className="font-serif italic text-cream/75 text-[clamp(1.5rem,2.5vw,2.5rem)] mt-2">
-            {title}
-          </h3>
+          {/* Album art */}
+          <Image
+            src={imageUrl}
+            alt={`${title} by ${artist}`}
+            fill
+            className="object-cover"
+          />
+          {/* Gradient overlay */}
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to top, rgba(20,19,19,0.85) 0%, rgba(20,19,19,0) 45%)' }}
+          />
+          {/* Text */}
+          <div className="relative z-10 flex flex-col items-end">
+            <h2 className="font-serif text-cream font-normal text-[clamp(2.5rem,4vw,4rem)]">
+              {artist}
+            </h2>
+            <h3 className="font-serif italic text-cream/75 text-[clamp(1.5rem,2.5vw,2.5rem)] mt-2">
+              {title}
+            </h3>
+          </div>
         </div>
 
         {/* CARD BACK */}
