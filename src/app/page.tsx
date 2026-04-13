@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import NewArrivals from "@/components/NewArrivals";
 import FromTheCrates from "@/components/FromTheCrates";
 import FeaturedCollections from "@/components/FeaturedCollections";
+import SonicLineage from "@/components/SonicLineage";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <NewArrivals />
       <FromTheCrates />
       <FeaturedCollections />
+      <SonicLineage />
     </main>
   );
 }
