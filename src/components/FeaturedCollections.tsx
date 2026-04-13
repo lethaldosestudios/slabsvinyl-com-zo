@@ -12,9 +12,9 @@ interface Collection {
 }
 
 const collections: Collection[] = [
-  { slug: 'late-night-funk',     name: 'Late Night Funk',         descriptor: 'Slow burns and deep pocket grooves',        count: 31, imageUrl: '/assets/collection-funk.jpg',    size: 'large' },
-  { slug: 'soul-club-1968-1975', name: 'Soul Club 1968–75',       descriptor: 'Atlantic, Stax, Motown. The golden run.',    count: 48, imageUrl: '/assets/collection-soul.jpg',    size: 'small' },
-  { slug: 'rare-reggae',         name: 'Rare Reggae Pressings',   descriptor: 'Jamaican pressings, UK exports, hard to find', count: 17, imageUrl: '/assets/collection-reggae.jpg', size: 'small' },
+  { slug: 'late-night-funk',     name: 'Late Night Funk',         descriptor: 'Slow burns and deep pocket grooves',        count: 31, imageUrl: '/assets/tyler-cherry-bomb-front.jpg',        size: 'large' },
+  { slug: 'soul-club-1968-1975', name: 'Soul Club 1968–75',       descriptor: 'Atlantic, Stax, Motown. The golden run.',    count: 48, imageUrl: '/assets/wu-tang-legend-front.jpg',            size: 'small' },
+  { slug: 'rare-reggae',         name: 'Rare Reggae Pressings',   descriptor: 'Jamaican pressings, UK exports, hard to find', count: 17, imageUrl: '/assets/odd-future-future-tape-v2-front.jpg', size: 'small' },
 ];
 
 function CollectionCard({ collection, large }: { collection: Collection; large?: boolean }) {
@@ -78,7 +78,7 @@ export default function FeaturedCollections() {
     >
       <div className="mx-auto" style={{ maxWidth: '1280px' }}>
         {/* Section header */}
-        <p className="font-display text-[10px] font-semibold uppercase tracking-[0.12em] text-slabs-text-faint mb-3">
+        <p className="font-display text-[10px] font-semibold uppercase tracking-[0.06em] text-slabs-text-faint mb-3">
           FROM THE COLLECTION
         </p>
         <h2 className="font-serif italic text-display-sm font-normal text-slabs-text mb-10">

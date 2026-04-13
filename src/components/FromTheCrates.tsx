@@ -8,15 +8,16 @@ interface CrateRecord {
   label: string;
   year: string;
   price: string;
+  imageUrl: string;
 }
 
 const crateRecords: CrateRecord[] = [
-  { artist: "Marvin Gaye",     title: "What's Going On",        label: "Tamla",   year: "1971", price: "$22.99" },
-  { artist: "Aretha Franklin", title: "Young, Gifted and Black", label: "Atlantic", year: "1972", price: "$24.99" },
-  { artist: "Fela Kuti",       title: "Zombie",                  label: "Coconut", year: "1977", price: "$34.99" },
-  { artist: "Cymande",         title: "Second Time Round",       label: "Janus",   year: "1973", price: "$44.99" },
-  { artist: "Roy Ayers",       title: "Everybody Loves the Sunshine", label: "Polydor", year: "1976", price: "$28.99" },
-  { artist: "Minnie Riperton", title: "Perfect Angel",           label: "Epic",    year: "1974", price: "$19.99" },
+  { artist: "Marvin Gaye",     title: "What's Going On",        label: "Tamla",   year: "1971", price: "$22.99", imageUrl: "/assets/marvin-gaye-whats-going-on-front.jpg" },
+  { artist: "Aretha Franklin", title: "Young, Gifted and Black", label: "Atlantic", year: "1972", price: "$24.99", imageUrl: "/assets/aretha-franklin-young-gifted-and-black-front.jpg" },
+  { artist: "Fela Kuti",       title: "Zombie",                  label: "Coconut", year: "1977", price: "$34.99", imageUrl: "/assets/fela-kuti-zombie-front.jpg" },
+  { artist: "Cymande",         title: "Second Time Round",       label: "Janus",   year: "1973", price: "$44.99", imageUrl: "/assets/cymande-second-time-round-front.jpg" },
+  { artist: "Roy Ayers",       title: "Everybody Loves the Sunshine", label: "Polydor", year: "1976", price: "$28.99", imageUrl: "/assets/roy-ayers-everybody-loves-the-sunshine-front.jpg" },
+  { artist: "Minnie Riperton", title: "Perfect Angel",           label: "Epic",    year: "1974", price: "$19.99", imageUrl: "/assets/minnie-riperton-perfect-angel-front.jpg" },
 ];
 
 export default function FromTheCrates() {
@@ -147,6 +148,7 @@ export default function FromTheCrates() {
               label={record.label}
               year={record.year}
               price={record.price}
+              imageUrl={record.imageUrl}
             />
           </div>
         ))}
