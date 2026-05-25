@@ -32,6 +32,9 @@ slabsvinyl-com/
 2. Read `/design-system/typography-design-system.md` in full
 3. Read the section prompt specified in the task
 
+## Project Conventions
+See `docs/slabs-project-conventions.md` for cart, metafield, env var, and file path conventions.
+
 ## Custom Agent
 
 - `SLABS-FRONTEND-AGENT` is the workspace custom agent for frontend work.
