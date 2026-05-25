@@ -4,6 +4,10 @@ This workspace is a headless Shopify storefront for **slabsvinyl.com** built wit
 
 Project-specific naming conventions, metafield definitions, env vars, and file paths are documented in `docs/slabs-project-conventions.md`.
 
+## Custom Agent
+
+The workspace agent is `shopify-headless`, defined in `.github/agents/shopify-headless.agent.md`. Use `@shopify-headless` for all frontend component work and Shopify API tasks.
+
 ## Key Rules
 
 - Use only design tokens defined in `tailwind.config.js` — no hardcoded hex values, no default Tailwind color names

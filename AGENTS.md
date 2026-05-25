@@ -37,9 +37,9 @@ See `docs/slabs-project-conventions.md` for cart, metafield, env var, and file p
 
 ## Custom Agent
 
-- `SLABS-FRONTEND-AGENT` is the workspace custom agent for frontend work.
+- `shopify-headless` is the workspace custom agent for frontend and Shopify work.
 - It uses the Shopify AI Toolkit plugin to validate Shopify GraphQL, Liquid, and app-related frontend code.
-- The agent is defined in `.github/agents/SLABS-FRONTEND-AGENT.agent.md`.
+- The agent is defined in `.github/agents/shopify-headless.agent.md`.
 
 ---
 
