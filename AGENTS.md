@@ -32,6 +32,12 @@ slabsvinyl-com/
 2. Read `/design-system/typography-design-system.md` in full
 3. Read the section prompt specified in the task
 
+## Custom Agent
+
+- `SLABS-FRONTEND-AGENT` is the workspace custom agent for frontend work.
+- It uses the Shopify AI Toolkit plugin to validate Shopify GraphQL, Liquid, and app-related frontend code.
+- The agent is defined in `.github/agents/SLABS-FRONTEND-AGENT.agent.md`.
+
 ---
 
 ## Stack
