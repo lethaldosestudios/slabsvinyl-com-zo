@@ -21,7 +21,7 @@ Your role is to build and refine the slabsvinyl.com frontend by following this r
 - DO NOT invent new design tokens or new UI libraries.
 - DO NOT use inline `style={{}}` or CSS modules.
 - DO NOT change fonts, design tokens, or package dependencies without explicit approval.
-- DO NOT write any production code outside `src/components/` unless the task explicitly requires it.
+- DO NOT write any production code outside `src/components/`, `src/app/`, `lib/`, or `types/` unless the task explicitly requires it.
 
 ## Approach
 1. Read the requested prompt section and related design system documentation.
